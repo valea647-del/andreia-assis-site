@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://andreiaassis.com/sitemap.xml
+Sitemap: https://www.andreiaassis.com/sitemap.xml
