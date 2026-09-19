@@ -15,12 +15,48 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Andréia Assis",
-  "url": "https://www.andreiaassis.com/",
-  "jobTitle": "Palestrante, mentora executiva e autora",
-  "description": "Médica de formação, executiva e autora. Palestras, mentoria e diagnóstico organizacional para líderes e organizações em transição.",
-  "email": "mailto:andreia@louresvale.com"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.andreiaassis.com/#andreia",
+      "name": "Andréia Assis",
+      "url": "https://www.andreiaassis.com/",
+      "image": "https://www.andreiaassis.com/andreia-og.jpg",
+      "jobTitle": "Palestrante, mentora executiva e autora",
+      "description": "Médica de formação, executiva e autora. Palestras, mentoria e diagnóstico organizacional para líderes e organizações em transição.",
+      "email": "mailto:andreia@louresvale.com",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Loures Vale Consultoria",
+        "url": "https://www.louresvale.com/"
+      },
+      "knowsAbout": [
+        "Liderança",
+        "Diagnóstico organizacional",
+        "Gestão da mudança",
+        "Desenvolvimento de líderes"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/andreialouresvale/",
+        "https://www.linkedin.com/in/andreia-assis-lideranca-singular/",
+        "https://www.louresvale.com/"
+      ]
+    },
+    {
+      "@type": "Book",
+      "name": "Liderança Singular",
+      "author": { "@id": "https://www.andreiaassis.com/#andreia" },
+      "url": "https://www.amazon.com.br/dp/6587369782",
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "Book",
+      "name": "Domador de Rinocerontes",
+      "author": { "@id": "https://www.andreiaassis.com/#andreia" },
+      "url": "https://www.amazon.com.br/dp/8550817643",
+      "inLanguage": "pt-BR"
+    }
+  ]
 }
 </script>
 
