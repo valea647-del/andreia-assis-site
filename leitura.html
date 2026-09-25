@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primeira Leitura · Matriz de Clareza Singular · Andréia Assis</title>
+<meta name="description" content="Seis frases, um minuto. Descubra em que quadrante da Matriz de Clareza Singular a sua empresa está e receba o laudo por e-mail.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A111C;--panel:#101B2E;--line:rgba(230,199,126,.22);--gold:#E6C77E;--copper:#E27A4E;--ivory:#F5F1E8;--sub:#CFC6B2;--muted:#9C8E6E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ivory);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.5;
+background-image:linear-gradient(rgba(230,199,126,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(230,199,126,.05) 1px,transparent 1px);background-size:32px 32px}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px 64px}
+header{padding:36px 0 8px}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(34px,8vw,52px);line-height:1.05;margin:14px 0 6px}
+h1 em{font-weight:400;color:var(--gold)}
+.lead{color:var(--sub);font-size:18px;margin:12px 0 0}
+.ecg{display:block;width:100%;height:70px;margin:18px 0 6px}
+.ecg path{fill:none;stroke:var(--gold);stroke-width:2.4;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(230,199,126,.7))}
+section{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:26px 22px;margin-top:22px}
+h2{font-family:Fraunces,serif;font-weight:700;font-size:24px;margin:6px 0 4px}
+.hint{color:var(--sub);font-size:15px;margin:0 0 14px}
+.axis{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:22px 0 4px}
+.q{border-top:1px solid var(--line);padding:16px 0}
+.q p{margin:0 0 10px;font-size:17px}
+.yn{display:flex;gap:10px}
+.yn label{flex:1;position:relative}
+.yn input{position:absolute;opacity:0;inset:0}
+.yn span{display:block;text-align:center;padding:12px 8px;border:1px solid rgba(230,199,126,.4);border-radius:4px;font-family:'IBM Plex Mono',monospace;letter-spacing:.14em;font-size:14px;cursor:pointer;min-height:44px}
+.yn input:checked+span{background:var(--gold);color:#0A111C;border-color:var(--gold);font-weight:500}
+.yn input:focus-visible+span{outline:2px solid var(--ivory);outline-offset:2px}
+.field{margin-top:16px}
+.field label.l{display:block;font-size:15px;color:var(--sub);margin-bottom:6px}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;background:#0A111C;border:1px solid rgba(230,199,126,.35);border-radius:4px;color:var(--ivory);font:inherit;padding:12px;min-height:46px}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid rgba(230,199,126,.25);border-radius:4px;cursor:pointer}
+.opt input{margin-top:4px;accent-color:#E6C77E;width:18px;height:18px;flex-shrink:0}
+.opt b{font-weight:600}
+.opt small{display:block;color:var(--sub);font-size:14px}
+.check{display:flex;gap:12px;align-items:flex-start;margin-top:14px;font-size:15px;color:var(--sub)}
+.check input{margin-top:3px;accent-color:#E6C77E;width:18px;height:18px;flex-shrink:0}
+.gift{border-color:rgba(230,199,126,.6)}
+.gift ul{margin:10px 0 0;padding-left:20px;color:var(--sub)}
+button{margin-top:24px;width:100%;background:var(--gold);color:#0A111C;border:0;border-radius:4px;padding:16px;font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;cursor:pointer;min-height:52px}
+button:hover{background:#F0D593}
+.err{color:var(--copper);font-size:15px;margin-top:12px;display:none}
+footer{margin-top:40px;color:var(--muted);font-size:14px;text-align:center}
+footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="tag">Palestra BNI · Funcionando ou Compensando?</div>
+  <h1>Primeira Leitura <em>da sua empresa</em></h1>
+  <p class="lead">Seis frases, um minuto. Você marca sim ou não e recebe por e-mail o laudo do seu quadrante na Matriz de Clareza Singular: onde a sua empresa está, quem está compensando e os primeiros gestos.</p>
+  <svg class="ecg" viewBox="0 0 720 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44 l40 0 q8 -8 16 0 l10 0 l4 6 l6 -44 l6 52 l4 -14 l14 0 q14 -12 28 0 l52 0 l20 0 q8 -8 16 0 l10 0 l4 6 l6 -44 l6 52 l4 -14 l14 0 q14 -12 28 0 l52 0 l20 0 q8 -8 16 0 l10 0 l4 6 l6 -44 l6 40 q14 -22 32 0 l66 0 l20 0 q8 -8 16 0 l10 0 l4 6 l6 -44 l6 52 l4 -14 l14 0 q14 -12 28 0 l62 0"/></svg>
+</header>
+
+<form id="f" action="https://formsubmit.co/andreia@louresvale.com" method="POST" novalidate>
+  <input type="hidden" name="_subject" value="Primeira Leitura · Palestra BNI">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://andreiaassis.com/leitura-obrigado.html">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <input type="hidden" name="origem" value="Palestra BNI · Funcionando ou Compensando?">
+  <input type="hidden" name="clareza_sim" id="clareza_sim">
+  <input type="hidden" name="coerencia_sim" id="coerencia_sim">
+  <input type="hidden" name="quadrante" id="quadrante">
+
+  <section>
+    <div class="tag">Parte 1 de 3</div>
+    <h2>As seis frases</h2>
+    <p class="hint">Responda pensando em como a empresa funciona hoje, do jeito que ela realmente é.</p>
+
+    <div class="axis">Clareza interna</div>
+    <div class="q"><p>1. Consigo dizer em uma frase o que minha empresa não negocia, mesmo quando isso custa resultado.</p>
+      <div class="yn"><label><input type="radio" name="f1_nao_negocia" value="sim" required><span>SIM</span></label><label><input type="radio" name="f1_nao_negocia" value="nao"><span>NÃO</span></label></div></div>
+    <div class="q"><p>2. Se eu perguntasse à minha equipe qual é a prioridade deste ano, todos dariam a mesma resposta.</p>
+      <div class="yn"><label><input type="radio" name="f2_prioridade" value="sim" required><span>SIM</span></label><label><input type="radio" name="f2_prioridade" value="nao"><span>NÃO</span></label></div></div>
+    <div class="q"><p>3. No último ano, dissemos não a uma boa oportunidade porque ela não combinava com o que queremos construir.</p>
+      <div class="yn"><label><input type="radio" name="f3_disse_nao" value="sim" required><span>SIM</span></label><label><input type="radio" name="f3_disse_nao" value="nao"><span>NÃO</span></label></div></div>
+
+    <div class="axis">Coerência do sistema</div>
+    <div class="q"><p>4. O resultado de que mais me orgulho continuaria acontecendo se eu, ou uma pessoa-chave, ficasse 30 dias fora.</p>
+      <div class="yn"><label><input type="radio" name="f4_30_dias" value="sim" required><span>SIM</span></label><label><input type="radio" name="f4_30_dias" value="nao"><span>NÃO</span></label></div></div>
+    <div class="q"><p>5. Na minha empresa, quem mais é reconhecido é quem constrói, e não quem apaga incêndio.</p>
+      <div class="yn"><label><input type="radio" name="f5_reconhecimento" value="sim" required><span>SIM</span></label><label><input type="radio" name="f5_reconhecimento" value="nao"><span>NÃO</span></label></div></div>
+    <div class="q"><p>6. No último mês, alguém da equipe discordou de mim e isso mudou uma decisão.</p>
+      <div class="yn"><label><input type="radio" name="f6_discordancia" value="sim" required><span>SIM</span></label><label><input type="radio" name="f6_discordancia" value="nao"><span>NÃO</span></label></div></div>
+  </section>
+
+  <section>
+    <div class="tag">Parte 2 de 3</div>
+    <h2>Para o seu laudo</h2>
+    <p class="hint">Duas perguntas abertas. Uma frase basta. São elas que deixam o laudo com a cara da sua empresa.</p>
+    <div class="field"><label class="l" for="dor">Qual resultado da sua empresa mais depende de você hoje?</label>
+      <textarea id="dor" name="dor_resultado_depende_de_voce" required></textarea></div>
+    <div class="field"><label class="l" for="dar_certo">Quando você pensa em dar certo nos próximos dois ou três anos, o que precisaria estar acontecendo?</label>
+      <textarea id="dar_certo" name="dar_certo_2_3_anos" required></textarea></div>
+    <div class="field"><span class="l" style="display:block;font-size:15px;color:var(--sub);margin-bottom:8px">O que mais pesa para você hoje?</span>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="moeda" value="Visibilidade" required><span><b>Ser reconhecido</b><small>pelo que construiu e entrega</small></span></label>
+        <label class="opt"><input type="radio" name="moeda" value="Autonomia"><span><b>Ter liberdade</b><small>para decidir e conduzir do meu jeito</small></span></label>
+        <label class="opt"><input type="radio" name="moeda" value="Legado"><span><b>Deixar algo que permaneça</b><small>uma empresa que continue sem depender de mim</small></span></label>
+      </div></div>
+    <div class="field"><label class="l" for="preoc">Sua principal preocupação para os próximos 12 meses</label>
+      <select id="preoc" name="preocupacao_12_meses" required>
+        <option value="">Escolha uma opção</option>
+        <option>Crescer sem perder o controle</option>
+        <option>Sucessão</option>
+        <option>Time e liderança</option>
+        <option>Margem e rentabilidade</option>
+        <option>Sair do operacional</option>
+        <option>Outra</option>
+      </select></div>
+  </section>
+
+  <section>
+    <div class="tag">Parte 3 de 3</div>
+    <h2>Para onde enviar</h2>
+    <div class="field"><label class="l" for="nome">Nome</label><input type="text" id="nome" name="nome" autocomplete="name" required></div>
+    <div class="field"><label class="l" for="email">E-mail</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+    <div class="field"><label class="l" for="whats">WhatsApp</label><input type="tel" id="whats" name="whatsapp" autocomplete="tel" placeholder="(11) 90000-0000" required></div>
+    <div class="field"><label class="l" for="empresa">Empresa</label><input type="text" id="empresa" name="empresa" autocomplete="organization" required></div>
+    <div class="field"><label class="l" for="cargo">Cargo</label><input type="text" id="cargo" name="cargo" autocomplete="organization-title"></div>
+    <div class="field"><label class="l" for="fat">Faturamento anual</label>
+      <select id="fat" name="faturamento"><option value="">Escolha uma faixa</option><option>Até R$ 5 milhões</option><option>R$ 5 a 20 milhões</option><option>R$ 20 a 50 milhões</option><option>R$ 50 a 100 milhões</option><option>Acima de R$ 100 milhões</option><option>Prefiro não informar</option></select></div>
+    <div class="field"><label class="l" for="pessoas">Número de pessoas na empresa</label>
+      <select id="pessoas" name="pessoas"><option value="">Escolha uma faixa</option><option>Até 10</option><option>11 a 50</option><option>51 a 200</option><option>201 a 500</option><option>Mais de 500</option></select></div>
+    <div class="field"><span class="l" style="display:block;font-size:15px;color:var(--sub);margin-bottom:8px">Quer uma conversa para aprofundar essa leitura?</span>
+      <div class="yn"><label><input type="radio" name="quer_conversa" value="sim" required><span>SIM</span></label><label><input type="radio" name="quer_conversa" value="nao"><span>AGORA NÃO</span></label></div></div>
+    <label class="check"><input type="checkbox" name="newsletter" value="sim" checked><span>Quero receber a newsletter DOMADORES, aos domingos.</span></label>
+    <label class="check"><input type="checkbox" name="consentimento_lgpd" value="sim" required><span>Autorizo o uso destas respostas para a elaboração do meu laudo e para contato de Andréia Assis. As respostas também podem ser usadas de forma agregada e anônima em estudos sobre empresas. Meus dados não serão compartilhados com terceiros.</span></label>
+  </section>
+
+  <section class="gift">
+    <div class="tag">O seu presente</div>
+    <ul>
+      <li>O laudo do seu quadrante na Matriz de Clareza Singular, por e-mail, em até 72 horas.</li>
+      <li>O e-book Domador de Pontos Cegos.</li>
+    </ul>
+    <button type="submit">Enviar minha leitura</button>
+    <p class="err" id="err" role="alert">Faltou responder alguma pergunta. Confira os campos obrigatórios.</p>
+  </section>
+</form>
+
+<footer>Andréia Assis · <a href="https://andreiaassis.com">andreiaassis.com</a> · Liderança Singular</footer>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('f'), err=document.getElementById('err');
+  function yes(n){var el=f.querySelector('input[name="'+n+'"]:checked');return el&&el.value==='sim'?1:0;}
+  f.addEventListener('submit',function(e){
+    if(!f.checkValidity()){e.preventDefault();err.style.display='block';
+      var bad=f.querySelector(':invalid'); if(bad){bad.closest('.q, .field, .check, section').scrollIntoView({behavior:'smooth',block:'center'});}
+      return;}
+    var c=yes('f1_nao_negocia')+yes('f2_prioridade')+yes('f3_disse_nao');
+    var s=yes('f4_30_dias')+yes('f5_reconhecimento')+yes('f6_discordancia');
+    var hc=c>=2, hs=s>=2;
+    var q=hc&&hs?'SINGULAR':(hc&&!hs?'Narrativa sem Sistema':(!hc&&hs?'Eficiência Copiada':'Blur Total'));
+    document.getElementById('clareza_sim').value=c+' de 3';
+    document.getElementById('coerencia_sim').value=s+' de 3';
+    document.getElementById('quadrante').value=q;
+  });
+})();
+</script>
+</body>
+</html>
