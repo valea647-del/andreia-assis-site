@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicitação recebida | Andréia Assis</title>
+<meta name="robots" content="noindex">
+<link rel="preload" href="/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 600;font-display:swap;src:url('/fraunces.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:400 600;font-display:swap;src:url('/fraunces-italic.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Inter';font-style:normal;font-weight:300 700;font-display:swap;src:url('/inter.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100vh;display:flex;align-items:center;background:#F5F1E8;color:#2E2E2E;font-family:'Inter',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:640px;margin:0 auto;padding:56px 24px}
+.wordmark{font-family:'Fraunces',serif;font-size:22px;font-weight:500;color:#1A2A3E;text-decoration:none}
+.wordmark em{font-style:italic;color:#6B7D5E}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#6B7D5E;margin:56px 0 22px}
+h1{font-family:'Fraunces',serif;font-weight:500;color:#1A2A3E;font-size:clamp(34px,7vw,52px);line-height:1.08;letter-spacing:-.02em;margin-bottom:24px}
+h1 em{font-style:italic;color:#6B7D5E}
+p{font-size:18px;color:#4A4A46;margin-bottom:36px;max-width:520px}
+.links{display:flex;gap:26px;flex-wrap:wrap}
+.links a{font-size:14px;font-weight:600;color:#1A2A3E;text-decoration:none;padding-bottom:3px;border-bottom:1px solid #6B7D5E}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="wordmark" href="/">Andréia <em>Assis</em></a>
+  <div class="eyebrow" id="ob-eyebrow">Solicitação recebida</div>
+  <h1 id="ob-h1">Obrigada. <em>Sua mensagem chegou.</em></h1>
+  <p id="ob-p">Cada solicitação é respondida pessoalmente, com uma leitura inicial de encaixe.</p>
+  <div class="links"><a href="/artigos.html">Ler os artigos →</a><a href="/">Voltar ao site →</a></div>
+</main>
+<script>
+if (location.search.indexOf('n=1') > -1) {
+  document.title = 'Inscrição recebida | Andréia Assis';
+  document.getElementById('ob-eyebrow').textContent = 'Newsletter semanal · DOMADORES';
+  document.getElementById('ob-h1').innerHTML = 'Obrigada. <em>Sua inscrição chegou.</em>';
+  document.getElementById('ob-p').textContent = 'Um ponto cego por semana, antes da semana começar. Todo domingo, no seu e-mail.';
+}
+</script>
+</body></html>
